@@ -2,6 +2,8 @@ $(document).ready(function(){
   
   $("#show-trades-btn").click(function() {
     
+    remove_all_child_elements("trade-details"); // Clear trade-details table first.
+    
     var total_amount = $("#total-amount").val();
     var price_per_share = $("#price-per-share").val();
     var commission_fee = $("#commission-fee").val();
@@ -21,7 +23,7 @@ $(document).ready(function(){
     for(var i=0; i < number_of_trades; i++)
     {
       var shares = Math.floor(trade_proportions[i]*portion_amount/price_per_share);
-      var cost = shares*price_per_share;
+      var cost = (shares*price_per_share).toFixed(2);
       show_trades_html+='<tr>';
       show_trades_html+='<td>'+trade_proportions[i]+'</td>';
       show_trades_html+='<td>'+shares+'</td>';
@@ -30,10 +32,20 @@ $(document).ready(function(){
       show_trades_html+='</tr>';
     }
     $("#trade-details").append(show_trades_html);
-    console.log(total_amount);
-    console.log(commission_fee);
-    console.log(trade_proportions);
-    console.log(total_proportion);
   });
   
 });
+
+
+/**
+ * Remove all children of element but keep the element.
+ * @param id
+ */
+function remove_all_child_elements(id)
+{
+  var node = document.getElementById(id);
+  while (node.firstChild)
+  {
+      node.removeChild(node.firstChild);
+  } 
+}
