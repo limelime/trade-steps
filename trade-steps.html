@@ -1,27 +1,41 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
 <html>                                                                 
- <head>
-	 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+     
+    <link rel="stylesheet" type="text/css" href="css/trade-steps.css">
+    <link rel="stylesheet" type="text/css" href="css/webpage.css">
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>      
+    <script type="text/javascript" src="js/trade-steps.js"></script>
 	 
-	 <link rel="stylesheet" type="text/css" href="css/trade-steps.css">
-	 <link rel="stylesheet" type="text/css" href="css/webpage.css">
-	 
-	 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>      
-   <script type="text/javascript" src="js/trade-steps.js"></script>
-	 
- </head>                                                                 
- <body>
-	<h1>Trade Steps</h1>
-		<dl>
-			<dt>Description</dt>
-			<dd>Given the total amount, the commission fee and the proportions of the smaller trades, calculate the smaller trades numbers.</dd>
-		 
-		  <dt>Github</dt>
-		  <dd>Latest version can be found at <a href="https://github.com/limelime/trade-steps">https://github.com/limelime/trade-steps</a>.</dd>
-		</dl>
+  </head>                                                                 
+  <body>
+    <div id="summary">
+      <h1>Trade Steps</h1>
+      <dl>
+      <dt>Description</dt>
+      <dd>Given the total amount, the commission fee and the proportions of the smaller trades, calculate the smaller trades numbers.</dd>
+
+      <dt>Github</dt>
+      <dd>Latest version can be found at <a href="https://github.com/limelime/trade-steps">https://github.com/limelime/trade-steps</a>.</dd>
+      </dl>
+    </div>
 	
-	<div id="steps">
-  </div>
+    <div id="trades">
+      <div id="base-info">
+        <label for="total-amount">Amount</label><input type="text" name="total-amount" id="total-amount" value="" maxlength="20" size="10" /> &nbsp;
+        <label for="commission-fee">Commission fee</label><input type="text" name="commission-fee" id="commission-fee" value="9.99" maxlength="5" size="5" /> &nbsp;
+        <label for="trade-proportions">Trade proportions</label><input type="text" name="trade-proportions" id="trade-proportions" value="1,5,7" maxlength="20" size="20" /> &nbsp;
+        <input id="break-down-trade-btn" type="button" value="Show trades"/>
+      </div>
+      
+      <div id="trade-details">
+      </div>
+    
+    </div>
+
+
 
  </body>                                                                 
  </html>
