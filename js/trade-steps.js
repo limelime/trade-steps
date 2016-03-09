@@ -28,8 +28,8 @@ $(document).ready(function(){
       var cost = (shares*price_per_share).toFixed(2);
       show_trades_html+='<tr>';
       show_trades_html+='<td>'+trade_proportions[i]+'</td>';
-      show_trades_html+='<td>'+shares+'</td>';
-      show_trades_html+='<td>'+price_per_share+'</td>';
+      show_trades_html+='<td>'+get_input_html(shares, 5)+'</td>';
+      show_trades_html+='<td>'+get_input_html(price_per_share, 5)+'</td>';
       show_trades_html+='<td>'+cost+'</td>';
       show_trades_html+='</tr>';
     }
@@ -50,4 +50,9 @@ function remove_all_child_elements(id)
   {
       node.removeChild(node.firstChild);
   } 
+}
+
+function get_input_html(value, width)
+{
+  return '<input type="text" name="" value="'+value+'" maxlength="'+width+'" size="'+width+'" />'; 
 }
