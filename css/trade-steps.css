@@ -7,3 +7,9 @@ table,th, td
 {
   border: 1px solid gray;
 }
+
+/* Right align input values */
+th, td
+{
+  text-align: right;
+}
