@@ -16,7 +16,9 @@ $(document).ready(function(){
     {
       total_proportion += parseInt(trade_proportions[i]);
     }
-    var portion_amount = (total_amount-(number_of_trades*commission_fee)) / total_proportion; // Note: Substract commission fees.
+    
+    // Calculate 1 portion amount.
+    var portion_amount = (total_amount-(number_of_trades*commission_fee)) / total_proportion; // Note: Subtract commission fees.
     
     // Display trades result.
     var show_trades_html='<table><tr><th></th><th>Shares</th><th>Price</th><th>Cost</th></tr>'
