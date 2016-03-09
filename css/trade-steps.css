@@ -9,7 +9,7 @@ table,th, td
 }
 
 /* Right align input values */
-th, td
+th, td, input
 {
   text-align: right;
 }
