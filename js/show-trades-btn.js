@@ -4,10 +4,12 @@ $(document).ready(function(){
     
     remove_all_child_elements("trade-details"); // Clear trade-details table first.
     
-    var total_amount = $("#total-amount").val();
-    var share_price = $("#share-price").val();
-    var commission_fee = $("#commission-fee").val();
-    var trade_proportions = $("#trade-proportions").val().split(',');
+    var tradeInfo = new TradeInfo();
+    
+    var total_amount = tradeInfo.getAmount();
+    var share_price = tradeInfo.getSharePrice();
+    var commission_fee = tradeInfo.getCommissionFee();
+    var trade_proportions = tradeInfo.getProportions();
     var number_of_trades = trade_proportions.length;
     
     // Get total proportion.
