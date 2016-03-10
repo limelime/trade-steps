@@ -1,6 +1,6 @@
 $(document).ready(function(){
 
-	$("table").on('click', 'input[type="button"]', function(e){
+	$('#trade-details').on('click', 'input[name="remove-trade"]', function(e){
 	   $(this).closest('tr').remove();
 	   console.log('fsdf');
 	   

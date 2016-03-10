@@ -33,7 +33,7 @@ $(document).ready(function(){
       show_trades_html+='<td>'+cost+'</td>';
       
       // Add action icon
-      show_trades_html+='<td><input type="button" value="Add"/> <input type="button" value="Remove"/></td>';
+      show_trades_html+='<td><input name="add-trade" type="button" value="Add"/> <input name="remove-trade" type="button" value="Remove"/></td>';
       
       // Close row.
       show_trades_html+='</tr>';
