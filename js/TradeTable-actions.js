@@ -11,5 +11,8 @@ $(document).ready(function(){
   })
   
   // ADD
-  
+  $('#trade-details').on('click', 'input[name="add-trade"]', function(e){
+     $(this).closest('tr').remove();
+  })
+    
 });
