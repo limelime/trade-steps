@@ -15,6 +15,13 @@ TradeTable.prototype.create = function ()
 
 TradeTable.prototype.addRow = function (proportion, share, price, cost)
 {
+  // Row to table.
+  this.table_html += this.buildHtmlRow(proportion, share, price, cost);
+};
+
+// Build and return html row.
+TradeTable.prototype.buildHtmlRow = function (proportion, share, price, cost)
+{
   var row_html='<tr>';
   row_html+='<td>'+proportion+'</td>';
   row_html+='<td>'+this.getInputHtml(share, 5)+'</td>';
@@ -27,10 +34,9 @@ TradeTable.prototype.addRow = function (proportion, share, price, cost)
   // Close row.
   row_html+='</tr>';
   
-  // Row to table.
-  this.table_html += row_html;
-  
-};
+  return row_html;
+}
+
 
 // Close the table.
 TradeTable.prototype.close = function ()
@@ -40,10 +46,12 @@ TradeTable.prototype.close = function ()
   $(this.parentID).append(this.table_html);
 }
 
-/*
+
+/*****************************
+ *
  *  PRIVATE functions.
  *
- */
+ *****************************/
 
 // Return uniform <input> for share and price.
 TradeTable.prototype.getInputHtml = function (value, width)

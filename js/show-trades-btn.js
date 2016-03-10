@@ -31,6 +31,7 @@ $(document).ready(function(){
       tradeTable.addRow(trade_proportions[i], shares, share_price, cost);
     }
     tradeTable.close();
+    
   });
   
 });
