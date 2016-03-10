@@ -22,6 +22,7 @@ $(document).ready(function(){
     
     // Display trades result.
     var tradeTable = new TradeTable("#trade-details");
+    tradeTable.create();
     for(var i=0; i < number_of_trades; i++)
     {
       var shares = Math.floor(trade_proportions[i]*portion_amount/share_price);

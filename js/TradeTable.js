@@ -6,6 +6,10 @@
 function TradeTable(parentID)
 {
   this.parentID = parentID;
+}
+
+TradeTable.prototype.create = function ()
+{
   this.table_html = '<table><tr><th></th><th>Shares</th><th>Price</th><th>Cost</th><th>Action</th></tr>';
 }
 
