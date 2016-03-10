@@ -9,17 +9,17 @@ function TradeInfo()
 // Return the total amount.
 TradeInfo.prototype.getAmount = function ()
 {
-  return $("#total-amount").val();
+  return Number($("#total-amount").val());
 }
 
 TradeInfo.prototype.getSharePrice = function ()
 {
-  return $("#share-price").val();
+  return Number($("#share-price").val());
 }
 
 TradeInfo.prototype.getCommissionFee = function ()
 {
-  return $("#commission-fee").val();
+  return Number($("#commission-fee").val());
 }
 
 // Return an array of proportions.
