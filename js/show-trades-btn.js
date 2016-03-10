@@ -21,24 +21,15 @@ $(document).ready(function(){
     var portion_amount = (total_amount-(number_of_trades*commission_fee)) / total_proportion; // Note: Subtract commission fees.
     
     // Display trades result.
-    var show_trades_html='<table><tr><th></th><th>Shares</th><th>Price</th><th>Cost</th><th>Action</th></tr>'
+    var tradeTable = new TradeTable("#trade-details");
     for(var i=0; i < number_of_trades; i++)
     {
       var shares = Math.floor(trade_proportions[i]*portion_amount/share_price);
       var cost = (shares*share_price).toFixed(2);
-      show_trades_html+='<tr>';
-      show_trades_html+='<td>'+trade_proportions[i]+'</td>';
-      show_trades_html+='<td>'+get_input_html(shares, 5)+'</td>';
-      show_trades_html+='<td>'+get_input_html(share_price, 5)+'</td>';
-      show_trades_html+='<td>'+cost+'</td>';
       
-      // Add action icon
-      show_trades_html+='<td><input name="add-trade" type="button" value="Add"/> <input name="remove-trade" type="button" value="Remove"/></td>';
-      
-      // Close row.
-      show_trades_html+='</tr>';
+      tradeTable.addRow(trade_proportions[i], shares, share_price, cost);
     }
-    $("#trade-details").append(show_trades_html);
+    tradeTable.close();
   });
   
 });
@@ -50,14 +41,9 @@ $(document).ready(function(){
  */
 function remove_all_child_elements(id)
 {
-  var node = document.getElementById(id);
-  while (node.firstChild)
-  {
-      node.removeChild(node.firstChild);
-  } 
-}
-
-function get_input_html(value, width)
-{
-  return '<input type="text" name="" value="'+value+'" maxlength="'+width+'" size="'+width+'" />'; 
+	var node = document.getElementById(id);
+	while (node.firstChild)
+	{
+	  node.removeChild(node.firstChild);
+	} 
 }
