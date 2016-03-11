@@ -12,14 +12,33 @@ TradeLeftOver.update = function (total_cost, total_fee)
   
   // Get numbers.
   var tradeInfo = new TradeInfo();
-  var amount = tradeInfo.getAmount();
-  var remainder = amount - total_cost;
+  var total_amount = tradeInfo.getAmount();
+  var remainder = total_amount - total_cost;
   
   // Reformat numbers and append.
-  amount      = parseFloat(amount).toFixed(2);
+  total_amount= parseFloat(total_amount).toFixed(2);
   total_cost  = parseFloat(total_cost).toFixed(2);
   remainder   = parseFloat(remainder).toFixed(2);
-  var left_over_html = '<br /><div><span>Total amount - Total cost - commission fee = left over</span></div>';
-  left_over_html += '<div><span>'+amount+' - '+total_cost+' - '+total_fee+' = '+remainder+'</span></div>';
+  
+  // Create table holding left over infos.
+  var left_over_html = '<br />';
+  
+      left_over_html += '<table><tr>'+
+	                          '<th>Total amount</th><th>-</th>'+
+	                          '<th>Total cost</th><th>-</th>'+
+	                          '<th>Commission fee</th><th>=</th>'+
+	                          '<th>Left over</th>'+
+                          '</tr>';
+                          
+      left_over_html += '<tr>'+
+                            '<td>'+total_amount+'</td><td>-</td>'+
+                            '<td>'+total_cost+'</td><td>-</td>'+
+                            '<td>'+total_fee+'</td><td>=</td>'+
+                            '<td>'+remainder+'</td>'+
+                          '</tr>';
+                                          
+      left_over_html += '</table>';
+  
+  // Append
   $('#trade-left-over').append(left_over_html);  
 }
