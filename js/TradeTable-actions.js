@@ -33,13 +33,15 @@ $(document).ready(function(){
     // UPDATE cost.
     var total_cost = 0;
     var total_fee = 0;
+    var total_share = 0;
     $("#trade-details > table > tbody > tr:not(:first-child)").each(function() {
-      var share = $(this).find("td:nth-child(2) > input").val();
-      var share_price = $(this).find("td:nth-child(3) > input").val();
+      var share = Number($(this).find("td:nth-child(2) > input").val());
+      var share_price = Number($(this).find("td:nth-child(3) > input").val());
       var cost = share * share_price;
             
       total_cost += cost; // Recalculate total_cost.
-
+      total_share += share; 
+      
       // Add fee if cost > 0.
       if (cost > 0)
       {
@@ -52,7 +54,7 @@ $(document).ready(function(){
     });
 
     // UPDATE left-over.
-    TradeLeftOver.update(total_cost, total_fee);
+    TradeLeftOver.update(total_cost, total_fee, total_share);
         
   });
   
