@@ -1,15 +1,15 @@
 /* Default table style. */
 table
 {
-  border-collapse:collapse;
+	border-collapse:collapse;
 }
 table,th, td
 {
-  border: 1px solid gray;
+	border: 1px solid gray;
 }
 
 /* Right align input values */
 th, td, input
 {
-  text-align: right;
+	text-align: right;
 }

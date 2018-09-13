@@ -1,0 +1,48 @@
+/**
+ * @version = $AUTO_VERSION
+ */
+
+
+/* CSS customization not specific to trade-steps */
+/*************************************************/
+body
+{
+	font-family: Verdana,sans-serif;
+	background-color: rgb(232, 242, 254);
+}
+
+h1
+{
+	background-color: #008AB8;
+	color: white;
+	text-align: center;
+}
+
+dl > dt
+{
+	font-weight: bold;
+}
+
+.step-label
+{
+	background-color: #279B61;
+	color: white;
+}
+
+/** Structure layout **/
+/**********************/
+div#main-content
+{
+	margin-left: 5em;
+	margin-right: 5em;
+	padding: 1em;
+
+	border-style: solid;
+	border-width: 1px;
+	border-color: gray;
+}
+
+table#input-table > tbody > tr > th
+{
+	text-align: right;
+}
