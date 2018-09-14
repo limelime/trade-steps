@@ -26,7 +26,7 @@ TradeTable.prototype.buildHtmlRow = function (proportion, share, price, cost)
   row_html+='<td>'+proportion+'</td>';
   row_html+='<td>'+this.getInputHtml(share, 5)+'</td>';
   row_html+='<td>'+this.getInputHtml(price, 5)+'</td>';
-  row_html+='<td>'+cost+'</td>';
+  row_html+='<td class="number">'+cost+'</td>';
 
   // Add action icons: ADD, REMOVE.
   row_html+='<td><input name="add-trade" type="button" value="Add"/> <input name="remove-trade" type="button" value="Remove"/></td>';

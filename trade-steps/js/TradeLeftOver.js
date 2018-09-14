@@ -34,18 +34,21 @@ TradeLeftOver.update = function (total_cost, total_fee, total_share)
                           '</tr>';
                           
       left_over_html += '<tr>'+
-                            '<td>'+total_amount+'</td><td>-</td>'+
-                            '<td>'+total_cost+'</td><td>-</td>'+
-                            '<td>'+total_fee+'</td><td>=</td>'+
-                            '<td>'+remainder+'</td>'+
+                            '<td class="number">'+total_amount+'</td><td>-</td>'+
+                            '<td class="number">'+total_cost+'</td><td>-</td>'+
+                            '<td class="number">'+total_fee+'</td><td>=</td>'+
+                            '<td class="number">'+remainder+'</td>'+
                           '</tr>';
                                           
       left_over_html += '</table>';
       
       // Share and average price
-      left_over_html += '<br /><span>Total shares: '+total_share+'</span><br />';
-      left_over_html += '<span>Average price: '+average_price+'</span>';
+      left_over_html += '<br /><span>Total shares: '+$.number(total_share)+'</span><br />';
+      left_over_html += '<span>Average price: '+$.number(average_price,5)+'</span>';
   
   // Append
-  $('#trade-left-over').append(left_over_html);  
+  $('#trade-left-over').append(left_over_html);
+  
+	// Trigger number formatting using jquery-number.
+	$('.number').number( true, 2 );   
 }

@@ -34,6 +34,9 @@ $(document).ready(function(){
     }
     tradeTable.close();
     
+    
+    // Trigger number formatting using jquery-number.
+    $('.number').number( true, 2 ); 
   });
   
 });
