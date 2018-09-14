@@ -1,6 +1,6 @@
 /**
- * Trade balance.
- *  Class to trade balance.
+ * Trade summary.
+ *  Class to trade summary.
  */
 
 function TradeBalance()
@@ -8,7 +8,7 @@ function TradeBalance()
 
 TradeBalance.update = function (total_cost, total_fee, total_share)
 {
-	$("#trade-balance").empty(); // Clear trade balance first.
+	$("#trade-balance").empty(); // Clear trade summary first.
 
 	// Get numbers.
 	var tradeInfo = new TradeInfo();
