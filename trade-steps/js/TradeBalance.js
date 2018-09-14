@@ -8,7 +8,7 @@ function TradeBalance()
 
 TradeBalance.update = function (total_cost, total_fee, total_share)
 {
-	$("#trade-balance").empty(); // Clear trade summary first.
+	$("#trade-summary").empty(); // Clear trade summary first.
 
 	// Get numbers.
 	var tradeInfo = new TradeInfo();
@@ -45,7 +45,7 @@ TradeBalance.update = function (total_cost, total_fee, total_share)
 		summary_html += '<span>Average price: </span><span class="number-5">'+average_price+'</span>';
   
 		// Append
-		$('#trade-balance').append(summary_html);
+		$('#trade-summary').append(summary_html);
 
 	// Trigger number formatting using jquery-number.
 	$('.number-0').number( true, 0 );
