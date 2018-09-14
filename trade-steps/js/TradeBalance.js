@@ -3,10 +3,10 @@
  *  Class to trade balance.
  */
 
-function TradeLeftOver()
+function TradeBalance()
 {}
 
-TradeLeftOver.update = function (total_cost, total_fee, total_share)
+TradeBalance.update = function (total_cost, total_fee, total_share)
 {
 	$("#trade-balance").empty(); // Clear trade balance first.
 

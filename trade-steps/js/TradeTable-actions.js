@@ -54,8 +54,8 @@ $(document).ready(function(){
       
     });
   
-    // UPDATE left-over.
-    TradeLeftOver.update(total_cost, total_fee, total_share);
+    // UPDATE balance.
+    TradeBalance.update(total_cost, total_fee, total_share);
         
   });
   
