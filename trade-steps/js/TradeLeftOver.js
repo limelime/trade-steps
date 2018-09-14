@@ -23,31 +23,29 @@ TradeLeftOver.update = function (total_cost, total_fee, total_share)
 	average_price = average_price.toFixed(4);
   
 	// Create table holding balance infos.
-	var left_over_html = '<br />';
-      
-		// Left over.
-		left_over_html += '<table><tr>'+
+	var balance_html = '<br />';
+		balance_html += '<table><tr>'+
 									'<th>Total amount</th><th>-</th>'+
 									'<th>Total cost</th><th>-</th>'+
 									'<th>Commission fee</th><th>=</th>'+
 									'<th>Balance</th>'+
 								'</tr>';
 												
-		left_over_html += '<tr>'+
+		balance_html += '<tr>'+
 							'<td class="number-2">'+total_amount+'</td><td>-</td>'+
 							'<td class="number-2">'+total_cost+'</td><td>-</td>'+
 							'<td class="number-2">'+total_fee+'</td><td>=</td>'+
 							'<td class="number-2">'+balance+'</td>'+
 						'</tr>';
 
-		left_over_html += '</table>';
+		balance_html += '</table>';
 
 		// Share and average price
-		left_over_html += '<br /><span>Total shares: </span><span class="number-0">'+total_share+'</span><br />';
-		left_over_html += '<span>Average price: </span><span class="number-5">'+average_price+'</span>';
+		balance_html += '<br /><span>Total shares: </span><span class="number-0">'+total_share+'</span><br />';
+		balance_html += '<span>Average price: </span><span class="number-5">'+average_price+'</span>';
   
 		// Append
-		$('#trade-left-over').append(left_over_html);
+		$('#trade-left-over').append(balance_html);
 
 	// Trigger number formatting using jquery-number.
 	$('.number-0').number( true, 0 );
