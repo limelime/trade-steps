@@ -1,6 +1,6 @@
 /**
- * Trade left over.
- *  Class to trade left over.
+ * Trade balance.
+ *  Class to trade balance.
  */
 
 function TradeLeftOver()
@@ -8,7 +8,7 @@ function TradeLeftOver()
 
 TradeLeftOver.update = function (total_cost, total_fee, total_share)
 {
-  $("#trade-left-over").empty(); // Clear trade left over first.
+  $("#trade-left-over").empty(); // Clear trade balance first.
   
   // Get numbers.
   var tradeInfo = new TradeInfo();
@@ -22,7 +22,7 @@ TradeLeftOver.update = function (total_cost, total_fee, total_share)
   balance   = parseFloat(balance).toFixed(2);
   average_price = average_price.toFixed(4);
   
-  // Create table holding left over infos.
+  // Create table holding balance infos.
   var left_over_html = '<br />';
       
       // Left over.
