@@ -46,3 +46,14 @@ table#input-table > tbody > tr > th
 {
 	text-align: right;
 }
+
+/* Table cell padding. */
+th, td
+{
+    padding: 5px;	
+}
+input
+{
+	padding-left: 5px;
+	padding-right: 5px;
+}
