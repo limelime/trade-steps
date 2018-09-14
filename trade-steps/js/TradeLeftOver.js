@@ -19,7 +19,7 @@ TradeLeftOver.update = function (total_cost, total_fee, total_share)
   // Reformat numbers and append.
   total_amount= parseFloat(total_amount).toFixed(2);
   total_cost  = parseFloat(total_cost).toFixed(2);
-  balance   = parseFloat(balance).toFixed(2);
+  balance     = parseFloat(balance).toFixed(2);
   average_price = average_price.toFixed(4);
   
   // Create table holding balance infos.
