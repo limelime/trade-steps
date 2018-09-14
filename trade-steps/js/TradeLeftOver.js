@@ -34,21 +34,23 @@ TradeLeftOver.update = function (total_cost, total_fee, total_share)
                           '</tr>';
                           
       left_over_html += '<tr>'+
-                            '<td class="number">'+total_amount+'</td><td>-</td>'+
-                            '<td class="number">'+total_cost+'</td><td>-</td>'+
-                            '<td class="number">'+total_fee+'</td><td>=</td>'+
-                            '<td class="number">'+remainder+'</td>'+
+                            '<td class="number-2">'+total_amount+'</td><td>-</td>'+
+                            '<td class="number-2">'+total_cost+'</td><td>-</td>'+
+                            '<td class="number-2">'+total_fee+'</td><td>=</td>'+
+                            '<td class="number-2">'+remainder+'</td>'+
                           '</tr>';
                                           
       left_over_html += '</table>';
       
       // Share and average price
-      left_over_html += '<br /><span>Total shares: '+$.number(total_share)+'</span><br />';
-      left_over_html += '<span>Average price: '+$.number(average_price,5)+'</span>';
+      left_over_html += '<br /><span>Total shares: </span><span class="number-0">'+total_share+'</span><br />';
+      left_over_html += '<span>Average price: </span><span class="number-5">'+average_price+'</span>';
   
   // Append
   $('#trade-left-over').append(left_over_html);
   
 	// Trigger number formatting using jquery-number.
-	$('.number').number( true, 2 );   
+	$('.number-0').number( true, 0 );
+	$('.number-2').number( true, 2 );
+	$('.number-5').number( true, 5 );     
 }

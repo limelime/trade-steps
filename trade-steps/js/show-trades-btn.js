@@ -36,7 +36,7 @@ $(document).ready(function(){
     
     
     // Trigger number formatting using jquery-number.
-    $('.number').number( true, 2 ); 
+    $('.number-2').number( true, 2 ); 
   });
   
 });
