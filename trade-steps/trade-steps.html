@@ -1,74 +1,66 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html>                                                                 
-  <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-     
-    <link rel="stylesheet" type="text/css" href="css/trade-steps.css">
-    <link rel="stylesheet" type="text/css" href="css/webpage.css">
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script> <!-- https://en.wikipedia.org/wiki/JQuery#Release_history | https://developers.google.com/speed/libraries -->      
-    <script type="text/javascript" src="js/show-trades-btn.js"></script>
-    <script type="text/javascript" src="js/TradeTable.js"></script>
-    <script type="text/javascript" src="js/TradeTable-actions.js"></script>
-    <script type="text/javascript" src="js/TradeInfo.js"></script>
-    <script type="text/javascript" src="js/TradeLeftOver.js"></script>
-	 
-  </head>                                                                 
-  <body>
-    <div id="summary">
-      <h1>Trade Steps</h1>
-      <dl>
-      <dt>Description</dt>
-      <dd>Given the total amount, the share price, the commission fee and the proportions of the smaller trades, calculate the smaller trades numbers.</dd>
-
-      <dt>Github</dt>
-      <dd>Latest version can be found at <a href="https://github.com/limelime/trade-steps">https://github.com/limelime/trade-steps</a>.</dd>
-      </dl>
-    </div>
-	
-    <div id="main-content">
-			<table id="input-table">
-			  <tbody>
-          <tr>
-            <th><label for="total-amount">Amount</label></th>
-            <td><input type="text" name="total-amount" id="total-amount" value="" maxlength="20" size="15" /></td>
-          </tr>
-      
-          <tr>
-            <th><label for="share-price">$/share</label></th>
-            <td><input type="text" name="share-price" id="share-price" value="" maxlength="20" size="15" /></td>
-          </tr>
-      
-          <tr>
-            <th><label for="commission-fee">Commission fee</label></th>
-            <td><input type="text" name="commission-fee" id="commission-fee" value="9.99" maxlength="20" size="15" /></td>
-          </tr>
-      
-          <tr>
-            <th><label for="trade-proportions">Trade proportions</label></th>
-            <td><input type="text" name="trade-proportions" id="trade-proportions" value="1,5,7" maxlength="20" size="15" /></td>
-          </tr>
-      
-          <tr>
-            <td>&nbsp;</td>
-            <td><input id="show-trades-btn" type="button" value="Show trades"/></td>
-          </tr>
-			  </tbody>
-			</table>      
-      
-      <br />      
-      <div id="trade-details">
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+      <link rel="stylesheet" type="text/css" href="css/trade-steps.css">
+      <link rel="stylesheet" type="text/css" href="css/webpage.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script> <!-- https://en.wikipedia.org/wiki/JQuery#Release_history | https://developers.google.com/speed/libraries -->      
+      <script type="text/javascript" src="jquery-plugins/jquery.number.min.js"></script><!-- https://github.com/customd/jquery-number -->
+      <script type="text/javascript" src="js/show-trades-btn.js"></script>
+      <script type="text/javascript" src="js/TradeTable.js"></script>
+      <script type="text/javascript" src="js/TradeTable-actions.js"></script>
+      <script type="text/javascript" src="js/TradeInfo.js"></script>
+      <script type="text/javascript" src="js/TradeLeftOver.js"></script>
+   </head>
+   <body>
+   
+      <div id="summary">
+         <h1>Trade Steps</h1>
+         <dl>
+            <dt>Description</dt>
+            <dd>Given the total amount, the share price, the commission fee and the proportions of the smaller trades, calculate the smaller trades numbers.</dd>
+            <dt>Github</dt>
+            <dd>Latest version can be found at <a href="https://github.com/limelime/trade-steps">https://github.com/limelime/trade-steps</a>.</dd>
+         </dl>
       </div>
-    
-      <div id="trade-left-over">
+      
+      <div id="main-content">
+      
+         <table id="input-table">
+            <tbody>
+               <tr>
+                  <th><label for="total-amount">Amount</label></th>
+                  <td><input type="text" name="total-amount" id="total-amount" value="" maxlength="20" size="15" /></td>
+               </tr>
+               <tr>
+                  <th><label for="share-price">$/share</label></th>
+                  <td><input type="text" name="share-price" id="share-price" value="" maxlength="20" size="15" /></td>
+               </tr>
+               <tr>
+                  <th><label for="commission-fee">Commission fee</label></th>
+                  <td><input type="text" name="commission-fee" id="commission-fee" value="9.99" maxlength="20" size="15" /></td>
+               </tr>
+               <tr>
+                  <th><label for="trade-proportions">Trade proportions</label></th>
+                  <td><input type="text" name="trade-proportions" id="trade-proportions" value="1,5,7" maxlength="20" size="15" /></td>
+               </tr>
+               <tr>
+                  <td>&nbsp;</td>
+                  <td><input id="show-trades-btn" type="button" value="Show trades"/></td>
+               </tr>
+            </tbody>
+         </table>
+         <br />
+
+         <div id="trade-details">
+         </div>
+         
+         <div id="trade-left-over">
+         </div>
+         
+         <div id="trade-summary">
+         </div>
+         
       </div>
-
-      <div id="trade-summary">
-      </div>
-                
-    </div>
-
-
-
- </body>                                                                 
- </html>
+   </body>
+</html>
