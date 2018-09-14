@@ -8,7 +8,7 @@ function TradeLeftOver()
 
 TradeLeftOver.update = function (total_cost, total_fee, total_share)
 {
-	$("#trade-left-over").empty(); // Clear trade balance first.
+	$("#trade-balance").empty(); // Clear trade balance first.
 
 	// Get numbers.
 	var tradeInfo = new TradeInfo();
@@ -45,7 +45,7 @@ TradeLeftOver.update = function (total_cost, total_fee, total_share)
 		balance_html += '<span>Average price: </span><span class="number-5">'+average_price+'</span>';
   
 		// Append
-		$('#trade-left-over').append(balance_html);
+		$('#trade-balance').append(balance_html);
 
 	// Trigger number formatting using jquery-number.
 	$('.number-0').number( true, 0 );
