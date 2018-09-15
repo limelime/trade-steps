@@ -48,7 +48,7 @@ $(document).ready(function(){
     });
 
     // UPDATE balance.
-    TradeBalance.update(total_cost, total_fee, total_share);
+    TradeSummary.update(total_cost, total_fee, total_share);
         
   });
   

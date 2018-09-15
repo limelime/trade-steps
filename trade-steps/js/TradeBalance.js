@@ -3,10 +3,10 @@
  *  Class to trade summary.
  */
 
-function TradeBalance()
+function TradeSummary()
 {}
 
-TradeBalance.update = function (total_cost, total_fee, total_share)
+TradeSummary.update = function (total_cost, total_fee, total_share)
 {
 	$("#trade-summary").empty(); // Clear trade summary first.
 
