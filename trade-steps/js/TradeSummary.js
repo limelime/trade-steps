@@ -3,6 +3,11 @@
  *	Test:
  *		Total amount	-	Total cost	-	Commission fee	=	Balance
  *		10,000.00		-	9,968.00	-	29.97			=	2.03
+ 
+ *			Shares	Price		Cost
+ *		1	 766		1		 766
+ *		5	3834		1		3834
+ *		7	5368		1		5368
  */
 
 function TradeSummary()
