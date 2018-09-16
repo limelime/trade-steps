@@ -39,8 +39,8 @@ $(document).ready(function(){
     tradeTable.close();
     
     
-    // Trigger number formatting using jquery-number.
-    $('.number-2').number( true, 2 ); 
+	TradeSummary.updateOnChange();    
+
   });
   
 });
