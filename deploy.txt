@@ -1,3 +1,4 @@
 ./pack.sh
 upload trade-steps_XXXX.tar.gz to /public_html/sites/default/files
 Extract
+Use incognito only.
