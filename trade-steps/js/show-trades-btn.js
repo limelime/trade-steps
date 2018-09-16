@@ -1,3 +1,7 @@
+/*
+	Main function().
+*/
+
 $(document).ready(function(){
   
   $("#show-trades-btn").click(function() {
