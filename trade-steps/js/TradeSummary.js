@@ -1,6 +1,8 @@
 /**
- * Trade summary.
- *  Class to trade summary.
+ * TradeSummary class.
+ *	Test:
+ *		Total amount	-	Total cost	-	Commission fee	=	Balance
+ *		10,000.00		-	9,968.00	-	29.97			=	2.03
  */
 
 function TradeSummary()
