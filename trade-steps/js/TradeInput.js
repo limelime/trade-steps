@@ -3,27 +3,27 @@
  *    total amount, share price, commission fee, trade proportions.
  */
 
-function TradeInfo()
+function TradeInput()
 {}
 
 // Return the total amount.
-TradeInfo.prototype.getAmount = function ()
+TradeInput.prototype.getAmount = function ()
 {
   return Number($("#total-amount").val());
 }
 
-TradeInfo.prototype.getSharePrice = function ()
+TradeInput.prototype.getSharePrice = function ()
 {
   return Number($("#share-price").val());
 }
 
-TradeInfo.prototype.getCommissionFee = function ()
+TradeInput.prototype.getCommissionFee = function ()
 {
   return Number($("#commission-fee").val());
 }
 
 // Return an array of proportions.
-TradeInfo.prototype.getProportions = function ()
+TradeInput.prototype.getProportions = function ()
 {
   return $("#trade-proportions").val().split(',');
 }

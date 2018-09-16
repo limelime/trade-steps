@@ -8,12 +8,12 @@ $(document).ready(function(){
     
     remove_all_child_elements("trade-details"); // Clear trade-details table first.
     
-    var tradeInfo = new TradeInfo();
+    var tradeInput = new TradeInput();
     
-    var total_amount = tradeInfo.getAmount();
-    var share_price = tradeInfo.getSharePrice();
-    var commission_fee = tradeInfo.getCommissionFee();
-    var trade_proportions = tradeInfo.getProportions();
+    var total_amount = tradeInput.getAmount();
+    var share_price = tradeInput.getSharePrice();
+    var commission_fee = tradeInput.getCommissionFee();
+    var trade_proportions = tradeInput.getProportions();
     var number_of_trades = trade_proportions.length;
     
     // Get total proportion.

@@ -11,8 +11,8 @@ function TradeSummary()
 TradeSummary.updateOnChange = function ()
 {
 	// Get commission fee.
-	var tradeInfo = new TradeInfo();
-	var commission_fee = tradeInfo.getCommissionFee();
+	var tradeInput = new TradeInput();
+	var commission_fee = tradeInput.getCommissionFee();
 
 	// UPDATE cost.
 	var total_cost = 0;
@@ -48,8 +48,8 @@ TradeSummary.update = function (total_cost, total_fee, total_share)
 	$("#trade-summary").empty(); // Clear trade summary first.
 
 	// Get numbers.
-	var tradeInfo = new TradeInfo();
-	var total_amount = tradeInfo.getAmount();
+	var tradeInput = new TradeInput();
+	var total_amount = tradeInput.getAmount();
 	var balance = total_amount - total_cost - total_fee;
 	var average_price = (total_cost + total_fee) / total_share;
 
