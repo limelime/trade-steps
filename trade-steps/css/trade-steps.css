@@ -13,3 +13,9 @@ th, td, input
 {
 	text-align: right;
 }
+
+.final-label
+{
+	font-size: large;
+	font-weight: bold;
+}
