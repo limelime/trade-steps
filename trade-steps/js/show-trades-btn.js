@@ -26,7 +26,7 @@ $(document).ready(function(){
 			e.preventDefault();
 			
 			// Show trades.
-			$("#show-trades-btn").click(function() {
+		//	$("#show-trades-btn").click(function() {
 				
 				remove_all_child_elements("trade-details"); // Clear trade-details table first.
 				
@@ -63,7 +63,7 @@ $(document).ready(function(){
 				
 				TradeSummary.updateOnChange();    
 
-			});
+		//	});
 			
 		}
 	});	

@@ -83,9 +83,11 @@ TradeSummary.update = function (total_cost, total_fee, total_share)
 		summary_html += '</table>';
 
 		// Share and average price
-		summary_html += '<br /><span>Total shares: </span><span class="number-0">'+total_share+'</span><br />';
-		summary_html += '<span>Average price: </span><span class="number-5">'+average_price+'</span>';
-  
+		summary_html += '<div class="final-label"><br/>';
+			summary_html += '<span>Total shares: </span><span class="number-0">'+total_share+'</span><br />';
+			summary_html += '<span>Average price: </span><span class="number-5">'+average_price+'</span>';
+		summary_html += '</div>';
+		
 		// Append
 		$('#trade-summary').append(summary_html);
 
