@@ -4,8 +4,12 @@
       <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
       <link rel="stylesheet" type="text/css" href="css/trade-steps.css">
       <link rel="stylesheet" type="text/css" href="css/webpage.css">
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script> <!-- https://en.wikipedia.org/wiki/JQuery#Release_history | https://developers.google.com/speed/libraries -->      
+      <link rel="stylesheet" type="text/css" href="css/jquery-validation.css">
+      
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script> <!-- https://en.wikipedia.org/wiki/JQuery#Release_history | https://developers.google.com/speed/libraries -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/jquery.validate.js"></script><!-- https://jqueryvalidation.org/ -->    
       <script type="text/javascript" src="js/jquery-plugins/jquery.number.js"></script><!-- https://github.com/limelime/jquery-number -->
+      
       <script type="text/javascript" src="js/show-trades-btn.js"></script>
       <script type="text/javascript" src="js/TradeTable.js"></script>
       <script type="text/javascript" src="js/TradeTable-actions.js"></script>
@@ -26,30 +30,32 @@
       
       <div id="main-content">
       
-         <table id="input-table">
-            <tbody>
-               <tr>
-                  <th><label for="total-amount">Amount</label></th>
-                  <td><input type="text" name="total-amount" id="total-amount" value="" maxlength="20" size="15" /></td>
-               </tr>
-               <tr>
-                  <th><label for="share-price">$/share</label></th>
-                  <td><input type="text" name="share-price" id="share-price" value="" maxlength="20" size="15" /></td>
-               </tr>
-               <tr>
-                  <th><label for="commission-fee">Commission fee</label></th>
-                  <td><input type="text" name="commission-fee" id="commission-fee" value="9.99" maxlength="20" size="15" /></td>
-               </tr>
-               <tr>
-                  <th><label for="trade-portions">Trade portions</label></th>
-                  <td><input type="text" name="trade-portions" id="trade-portions" value="1,5,7" maxlength="20" size="15" /></td>
-               </tr>
-               <tr>
-                  <td>&nbsp;</td>
-                  <td><input id="show-trades-btn" type="button" value="Show trades"/></td>
-               </tr>
-            </tbody>
-         </table>
+		<form name="trade-inputs">
+	         <table id="input-table">
+	            <tbody>
+	               <tr>
+	                  <th><label for="total-amount">Amount</label></th>
+	                  <td><input type="text" name="total-amount" id="total-amount" value="" maxlength="20" size="15" /></td>
+	               </tr>
+	               <tr>
+	                  <th><label for="share-price">$/share</label></th>
+	                  <td><input type="text" name="share-price" id="share-price" value="" maxlength="20" size="15" /></td>
+	               </tr>
+	               <tr>
+	                  <th><label for="commission-fee">Commission fee</label></th>
+	                  <td><input type="text" name="commission-fee" id="commission-fee" value="9.99" maxlength="20" size="15" /></td>
+	               </tr>
+	               <tr>
+	                  <th><label for="trade-portions">Trade portions</label></th>
+	                  <td><input type="text" name="trade-portions" id="trade-portions" value="1,5,7" maxlength="20" size="15" /></td>
+	               </tr>
+	               <tr>
+	                  <td>&nbsp;</td>
+	                  <td><input id="show-trades-btn" type="submit" value="Show trades"/></td>
+	               </tr>
+	            </tbody>
+	         </table>
+		</form>	         
          <br />
 
          <div id="trade-details">
