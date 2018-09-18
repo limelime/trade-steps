@@ -1,6 +1,6 @@
 /**
  * Trade information class return basic informations of a trade:
- *    total amount, share price, commission fee, trade proportions.
+ *    total amount, share price, commission fee, trade portions.
  */
 
 function TradeInput()
@@ -22,8 +22,8 @@ TradeInput.prototype.getCommissionFee = function ()
   return Number($("#commission-fee").val());
 }
 
-// Return an array of proportions.
-TradeInput.prototype.getProportions = function ()
+// Return an array of portions.
+TradeInput.prototype.getPortions = function ()
 {
-  return $("#trade-proportions").val().split(',');
+  return $("#trade-portions").val().split(',');
 }

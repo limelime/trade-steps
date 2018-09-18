@@ -13,14 +13,14 @@ $(document).ready(function(){
     var total_amount = tradeInput.getAmount();
     var share_price = tradeInput.getSharePrice();
     var commission_fee = tradeInput.getCommissionFee();
-    var trade_proportions = tradeInput.getProportions();
-    var number_of_trades = trade_proportions.length;
+    var trade_portions = tradeInput.getPortions();
+    var number_of_trades = trade_portions.length;
     
     // Get total proportion.
     var total_proportion = 0;
     for(var i=0; i < number_of_trades; i++)
     {
-      total_proportion += parseInt(trade_proportions[i]);
+      total_proportion += parseInt(trade_portions[i]);
     }
     
     // Calculate 1 portion amount.
@@ -31,10 +31,10 @@ $(document).ready(function(){
     tradeTable.create();
     for(var i=0; i < number_of_trades; i++)
     {
-      var shares = Math.floor(trade_proportions[i]*portion_amount/share_price);
+      var shares = Math.floor(trade_portions[i]*portion_amount/share_price);
       var cost = (shares*share_price).toFixed(2);
       
-      tradeTable.addRow(trade_proportions[i], shares, share_price, cost);
+      tradeTable.addRow(trade_portions[i], shares, share_price, cost);
     }
     tradeTable.close();
     
