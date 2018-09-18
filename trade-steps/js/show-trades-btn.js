@@ -17,12 +17,7 @@ $(document).ready(function(){
 			"total-amount": "Please enter the amount.",
 			"share-price": "Please enter the share price."
 		},
-		
-		/*
-		submitHandler: function(form) {
-			form.submit();
-		}
-		*/
+
 	});
   
 	$("form[name='trade-inputs']").on('submit', function(e) {
