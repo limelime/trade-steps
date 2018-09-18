@@ -13,17 +13,17 @@ TradeTable.prototype.create = function ()
   this.table_html = '<table><tr><th></th><th>Shares</th><th>Price</th><th>Cost</th><th>Action</th></tr>';
 }
 
-TradeTable.prototype.addRow = function (proportion, share, price, cost)
+TradeTable.prototype.addRow = function (portion, share, price, cost)
 {
   // Row to table.
-  this.table_html += this.buildHtmlRow(proportion, share, price, cost);
+  this.table_html += this.buildHtmlRow(portion, share, price, cost);
 };
 
 // Build and return html row.
-TradeTable.prototype.buildHtmlRow = function (proportion, share, price, cost)
+TradeTable.prototype.buildHtmlRow = function (portion, share, price, cost)
 {
   var row_html='<tr>';
-  row_html+='<td>'+proportion+'</td>';
+  row_html+='<td>'+portion+'</td>';
   row_html+='<td>'+this.getInputHtml(share, 10)+'</td>';
   row_html+='<td>'+this.getInputHtml(price, 10)+'</td>';
   row_html+='<td class="number-2">'+cost+'</td>';
