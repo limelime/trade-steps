@@ -6,4 +6,6 @@ As a trader, I would like the application to break down my trade to smaller trad
 
 ## UC: Break down my trade
 Given the total amount, the share price, the commission fee and the proportions of the smaller trades.
-The application display
+
+# Reference
+https://github.com/jquery-validation/jquery-validation
