@@ -1,9 +1,9 @@
 /* Default table style. */
 table
 {
-	border-collapse:collapse;
+	border-collapse: collapse;
 }
-table,th, td
+table
 {
 	border: 1px solid gray;
 }
