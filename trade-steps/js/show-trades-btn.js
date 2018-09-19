@@ -28,7 +28,6 @@ $(document).ready(function(){
 		}
 	});	
 
-
 });
 
 
@@ -59,14 +58,14 @@ function onShowTradesClick()
 	var number_of_trades = trade_portions.length;
 	
 	// Get total proportion.
-	var total_proportion = 0;
+	var total_portion = 0;
 	for(var i=0; i < number_of_trades; i++)
 	{
-		total_proportion += parseInt(trade_portions[i]);
+		total_portion += parseInt(trade_portions[i]);
 	}
 	
 	// Calculate 1 portion amount.
-	var portion_amount = (total_amount-(number_of_trades*commission_fee)) / total_proportion; // Note: Subtract commission fees.
+	var portion_amount = (total_amount-(number_of_trades*commission_fee)) / total_portion; // Note: Subtract commission fees.
 	
 	// Display trades result.
 	var tradeTable = new TradeTable("#trade-details");
@@ -83,4 +82,9 @@ function onShowTradesClick()
 	
 	TradeSummary.updateOnChange();
 }
+/*
+jQuery.validator.addMethod("biggerThanAmount", function(value, element) {
+    return this.optional(element) || (parseFloat(value) > 0);
+}, "* Amount must be greater than zero");
+*/
 
