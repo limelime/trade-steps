@@ -10,47 +10,40 @@ $(document).ready(function(){
 		wrapper: 'div',
 		rules: {
 			"total-amount": "required",
-			"share-price": 	{
+			"share-price":	{
 								required: true,
 								biggerThanZero: true
+							},
+			"trade-portions":	{
+								required: true,
 							}
 		},
 		// Specify validation error messages
 		messages: {
-			"total-amount": "Please enter the amount.",
+			"total-amount": { required: "Enter your total capital." }
 		},
 
 	});
-
-
-	$.validator.addMethod("biggerThanZero",
-		function(value, element) {
+		// Custom validations.
+		$.validator.addMethod("biggerThanZero",
+			function(value, element) {
+				if (value < 1) { return false; }
+				else
+				{ return true; }
+			},
+			"Must be bigger than zero."
+		);  
 	
-			if (value < 1) { 
-console.log(value);				
-				return false;
-				}
-			else
-			{
-				return true;
-				}
-		},
-		"Must be bigger than zero."
-	);  
- 
+	// Catch validation process and don't submit.
 	$("form[name='trade-inputs']").on('submit', function(e) {
 		var isvalid = $("form[name='trade-inputs']").valid();
 		if (isvalid) {
-			e.preventDefault();
-			onShowTradesClick();
+			e.preventDefault();	// Don't submit.
+			onShowTradesClick();// Run your process.
 		}
-	});	
+	});
 
 });
-
-jQuery.validator.addMethod("biggerThanZero", function(value, element) {
-    return this.optional(element) || (parseFloat(value) > 0);
-}, "* Amount must be greater than zero");
 
 /**
  * Remove all children of element but keep the element.
@@ -103,9 +96,4 @@ function onShowTradesClick()
 	
 	TradeSummary.updateOnChange();
 }
-/*
-jQuery.validator.addMethod("biggerThanAmount", function(value, element) {
-    return this.optional(element) || (parseFloat(value) > 0);
-}, "* Amount must be greater than zero");
-*/
 
