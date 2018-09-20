@@ -19,3 +19,8 @@ th, td, input
 	font-size: large;
 	font-weight: bold;
 }
+
+#input-table th
+{
+	vertical-align: top;
+}
