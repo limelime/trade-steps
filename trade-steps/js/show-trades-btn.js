@@ -10,16 +10,34 @@ $(document).ready(function(){
 		wrapper: 'div',
 		rules: {
 			"total-amount": "required",
-			"share-price": "required"
+			"share-price": 	{
+								required: true,
+								biggerThanZero: true
+							}
 		},
 		// Specify validation error messages
 		messages: {
 			"total-amount": "Please enter the amount.",
-			"share-price": "Please enter the share price."
 		},
 
 	});
-  
+
+
+	$.validator.addMethod("biggerThanZero",
+		function(value, element) {
+	
+			if (value < 1) { 
+console.log(value);				
+				return false;
+				}
+			else
+			{
+				return true;
+				}
+		},
+		"Must be bigger than zero."
+	);  
+ 
 	$("form[name='trade-inputs']").on('submit', function(e) {
 		var isvalid = $("form[name='trade-inputs']").valid();
 		if (isvalid) {
@@ -30,6 +48,9 @@ $(document).ready(function(){
 
 });
 
+jQuery.validator.addMethod("biggerThanZero", function(value, element) {
+    return this.optional(element) || (parseFloat(value) > 0);
+}, "* Amount must be greater than zero");
 
 /**
  * Remove all children of element but keep the element.
