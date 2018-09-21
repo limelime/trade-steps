@@ -27,9 +27,7 @@ $(document).ready(function(){
 		// Custom validations.
 		$.validator.addMethod("biggerThanZero",
 			function(value, element) {
-				if (value < 1) { return false; }
-				else
-				{ return true; }
+				if (value > 0) { return true; } else { return false; }
 			},
 			"Must be bigger than zero."
 		);  
